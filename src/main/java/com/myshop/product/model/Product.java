@@ -12,8 +12,8 @@ import java.math.BigDecimal;
 
 @Entity
 @Getter
-@RequiredArgsConstructor
-@NoArgsConstructor
+
+
 public class Product {
 
     @Id
@@ -23,5 +23,13 @@ public class Product {
     private String category;
     private BigDecimal price;
 
+    public Product() {
+    }
 
+    public Product(Long id, String name, String category, BigDecimal price) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.price = price;
+    }
 }
